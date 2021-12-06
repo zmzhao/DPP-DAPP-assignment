@@ -27,7 +27,7 @@ contract SensorDataBasis{
     } 
 
     // Sensor data mapping
-    mapping(uint => SensorData) public sensorDataArray;
+    mapping(uint => SensorData) sensorDataArray;
 
     /*
     //   Define an add sensor data function
@@ -97,7 +97,7 @@ contract SensorDataRegister is SensorDataQuery{
 
 // Student should fill in the following smart contract, update the addSensorData function, and to optimize the change of storage
 // if possible, override any function from the high level smart contract
-contract SensorDataRegisterOnlyDifferenceData is SensorDataRegister{
+contract SensorDataRegisterWithStorageOptimization is SensorDataRegister{
 
      // add code of the following function;
     function addSensorData (uint _sensorId, string memory _sensorName, string memory _sensorType, uint  _sensorValue, uint  _gatewayID) 
@@ -114,7 +114,7 @@ contract SensorDataRegisterOnlyDifferenceData is SensorDataRegister{
 
 // Student should fill in the following smart contract, update the addSensorData function, and to optimize the change of storage
 // if possible, override any function from the high level smart contract
-contract SensorDataRegisterOnlyDifferenceDataIPFS is SensorDataRegisterOnlyDifferenceData{
+contract SensorDataRegisterForLargeDataSet is SensorDataRegisterWithStorageOptimization{
 
  
 }
