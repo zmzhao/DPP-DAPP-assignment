@@ -1,4 +1,4 @@
-pragma solidity ^ 0.6.0;
+pragma solidity > 0.4.4;
 // SPDX-License-Identifier: DPP2021
 
 /* Define the smart contract Voting*/
@@ -18,7 +18,7 @@ contract Voting {
     }    
 
     /* The list of all candidates. The example we only accepts three candidates */
-    candidate[3] candidatelist;   
+    candidate[3] public candidatelist;   
 
     /* The constructor function of the contract */
     constructor()
@@ -70,46 +70,43 @@ contract Voting {
 
 }
 
-// Students should  improve this smart contract
+// Assignment 2.1.a 
+// Students should  improve this smart contract, so that no double voting will be allowed
 contract VotingNodoubleVoting is Voting{
-    /*
-      Define a data structure called voter, and define a mapping for all voters
-      Add some code here
-    */
+    //  You will need to define some data structure to store the voting history, e.g., voters, etc.
 
-        /* Vote a specific candidate. When a voter votes for a candidate, his voted status changes*/
+
+    //Override the following function with new code
+    // Double voting should be detected. 
     function voteCandidate(uint id)
         public
         virtual
         override  
     {
-        // Student should add code here
-        // And test if it avoides double voting         
-   
+
+ 
+        
     }   
 }
 
-// Students should  improve this smart contract
+// Assignment 2.1.b
+// Students should  improve this smart contract to accept only votings within the time window 
 contract VotingInTimeWindow is VotingNodoubleVoting{
-     // Define the vote start/end time variable 
-     // add some code here to check the time window
- 
+   // You will need to define variables of time window
 
-      //  How will you initialize the time window? 
-      // let's assume the window will be first hour after the deployment
-      // add some code here
-
-
+   // how will you initialized the time window?
 
 
     // improve the vodie candidate function
     function voteCandidate(uint id)
         public
         override
-        checkTimeAfter(voteStartTime)
-        checkTimeBefore(voteEndTime)  
+        // you also need code to check the time window
+        // only the voting submitted within in the time window will be accepted
+
     {
-      // add your code here         
+      // ....    
+
     }       
 }
 
