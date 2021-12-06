@@ -1,5 +1,4 @@
-pragma solidity  ^0.6.0;
-
+pragma solidity ^ 0.6.0;
 // SPDX-License-Identifier: DPP2021
 
 /* Define the smart contract Voting*/
@@ -23,6 +22,7 @@ contract Voting {
 
     /* The constructor function of the contract */
     constructor()
+        public
     {       
         /* Initialize three candidates; their names, addresses and votes */
         candidatelist[0].name = 'Peter';       
@@ -44,12 +44,13 @@ contract Voting {
     {
         if (id<candidatelist.length) {           
             return candidatelist[id].name;      
-    }   else return '';
+    }   
     }   
 
     /* Vote a specific candidate */
     function voteCandidate(uint id)
         public  
+        virtual
     {
         if (id<candidatelist.length) {
             candidatelist[id].votes+=1;         
@@ -64,7 +65,7 @@ contract Voting {
     {
         if (id<candidatelist.length) {
             return candidatelist[id].votes;         
-        }   else return 0;         
+        }            
     }         
 
 }
