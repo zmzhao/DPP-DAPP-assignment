@@ -1,5 +1,5 @@
 pragma solidity > 0.7.0;
-// SPDX-License-Identifier: UvA-DPP2022
+// SPDX-License-Identifier: UvA-DPP2023
 
 /* Define the smart contract Voting*/
 contract Voting {  
