@@ -1,5 +1,5 @@
 pragma solidity > 0.7.0;
-// SPDX-License-Identifier: UvA-DPP2022
+// SPDX-License-Identifier: UvA-DPP2023
 
 contract SensorDataBasis{
     //   Define a data structure to store sensor data
