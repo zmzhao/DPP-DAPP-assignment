@@ -46,7 +46,7 @@ contract Voting {
          }else return "";
     }
 
-    /* Vote a specific candidate */
+    /* Vote for a specific candidate */
     function voteCandidate(uint id)
         public
         virtual
@@ -82,9 +82,7 @@ contract VotingNodoubleVoting is Voting{
         virtual
         override 
     {
-
-
-
+    // Your code goes here...
     }  
 }
 
@@ -101,9 +99,9 @@ contract VotingInTimeWindow is VotingNodoubleVoting{
         public
         override
         // You also need code to check the time window.
-        // Only the voting submitted within in the time window will be accepted.
+        // Only the voting submitted within the time window will be accepted.
 
     {
-      // ....   
+      // Your code goes here...   
     }      
 }
