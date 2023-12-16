@@ -70,12 +70,12 @@ contract Voting {
 }
 
 // Assignment 2.1.a
-// Students should  improve this smart contract, so that no double voting will be allowed
+// Students should improve this smart contract, so that no double voting will be allowed
 contract VotingNodoubleVoting is Voting{
-    //  You will need to define some data structure to store the voting history, e.g., voters, etc.
+    // You will need to define some data structure to store the voting history, e.g., voters, etc.
 
 
-    //Override the following function with new code
+    // Override the following function with new code.
     // Double voting should be detected.
     function voteCandidate(uint id)
         public
@@ -89,22 +89,21 @@ contract VotingNodoubleVoting is Voting{
 }
 
 // Assignment 2.1.b
-// Students should  improve this smart contract to accept only votings within the time window
+// Students should improve this smart contract to accept only votings within the time window.
 contract VotingInTimeWindow is VotingNodoubleVoting{
-   // You will need to define variables of time window
+   // You will need to define variables for the time window.
 
-   // how will you initialized the time window?
+   // How will you initialize the time window?
 
 
-    // improve the vodie candidate function
+    // Improve the voteCandidate function
     function voteCandidate(uint id)
         public
         override
-        // you also need code to check the time window
-        // only the voting submitted within in the time window will be accepted
+        // You also need code to check the time window.
+        // Only the voting submitted within in the time window will be accepted.
 
     {
       // ....   
-
     }      
 }
